@@ -43,14 +43,14 @@ class Test_Assignment_01(unittest.TestCase):
         """
         A test that will fail.
         """
-        self.assertFalse(False, 'This should fail, please fix it.')
+        self.assertFalse(True, 'This should fail, please fix it.')
 
     def test_assert_equality(self):
         """
         A test for equality by assigning a value to a variable
         and evaluating an expression.
         """
-        expected_value = 2
+        expected_value = _
         truth_value = 1 + 1
         self.assertEqual(expected_value, truth_value)
 
@@ -66,7 +66,7 @@ class Test_Assignment_01(unittest.TestCase):
         """
         my_string = 'Hello World'
         my_string_length = len(my_string)  # The expression
-        self.assertEqual(11, my_string_length)
+        self.assertEqual(10, my_string_length)
 
     def test_big_integers(self):
         """
@@ -80,12 +80,12 @@ class Test_Assignment_01(unittest.TestCase):
         A test for bigger, or smaller integers
         """
         big = 1e6
-        self.assertEqual(big, 1000000)
-        self.assertTrue(type(big), float)
+        self.assertEqual(big, 100)
+        self.assertTrue(type(big), int)
 
         small = 1e-5
-        self.assertEqual(small, 0.00001)
-        self.assertTrue(type(small), float)
+        self.assertEqual(small, 0.0001)
+        self.assertTrue(type(small), int)
 
     def test_type_conversion(self):
         """
@@ -93,7 +93,7 @@ class Test_Assignment_01(unittest.TestCase):
         """
         i = 1
         self.assertTrue(type(i) == int)
-        self.assertTrue(isinstance(i, int))  # These lines do the same type checking
+        self.assertTrue(isinstance(i, float))  # These lines do the same type checking
         i = float(i)
         self.assertTrue(isinstance(i, float))
         i = str(i)
@@ -104,7 +104,7 @@ class Test_Assignment_01(unittest.TestCase):
         A poorly named function to test converting strings to numeric types
         """
         k = "123"
-        self.assertTrue(isinstance(k, str))  # New assertion type that shortens previous calls
+        self.assertIsInstance(k, str)  # New assertion type that shortens previous calls
         k = float(k)
         self.assertEqual(123, k)  # Hmmm, note how this equality works across types
 
@@ -114,7 +114,7 @@ class Test_Assignment_01(unittest.TestCase):
         """
         j = 3.9999
         self.assertTrue(int(j), float)
-        self.assertEqual(int(j), 3)
+        self.assertEqual(int(j), 4)
 
     def tearDown(self):
         """
