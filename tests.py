@@ -10,7 +10,7 @@ class Test_Assignment_01(unittest.TestCase):
 
     If you get stuck, launch a Python interpreter (Python,
     iPython, or Jupyter Notebook) and copy a small block of
-    code.
+    code
 
     For example, if the test reads:
 
